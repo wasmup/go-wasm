@@ -2,8 +2,8 @@
 ## Go WebAssembly frontend + Go backend
 
 <img src="gowasm.png">
-
 <img src="gowasm2.png">
+<img src="gowasm3.png">
 
 ### Run
 ```sh
