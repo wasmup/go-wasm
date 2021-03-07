@@ -3,6 +3,8 @@
 
 <img src="gowasm.png">
 
+<img src="gowasm2.png">
+
 ### Run
 ```sh
 # make
