@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="wasm_exec.js"></script>
+    <script>
+        const go = new Go();
+        WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then((result) => {
+            go.run(result.instance);
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Go WebAssembly</h1>
+
+    <table>
+        <tr>
+            <td> Counter</td>
+            <td>
+                <input type="number" id="inputNumber" value="0">
+                <input type="button" id="buttonClear" value="Clear">
+
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="button" id="buttonIncCounter" value="Inc Counter">
+                <input type="button" id="buttonDecCounter" value="Dec Counter">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="button" id="buttonGetCounter" value="Get Counter">
+                <input type="button" id="buttonSetCounter" value="Set Counter">
+            </td>
+        </tr>
+    </table>
+
+    <textarea id="text1" cols="50" rows="10"></textarea>
+
+</body>
+
+</html>
