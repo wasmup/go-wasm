@@ -23,8 +23,8 @@ func serve() {
 }
 
 func (p *Model) counterHandeler(w http.ResponseWriter, r *http.Request) {
-	fmt.Print(r.Method, "\t Counter in: ", p.Counter())
-	defer func() { fmt.Println("\t out: ", p.Counter()) }()
+	fmt.Printf("%-4s Counter in: %22d", r.Method, p.Counter())
+	defer func() { fmt.Printf(" out: %22d\n", p.Counter()) }()
 
 	switch r.Method {
 	case "GET":
