@@ -12,3 +12,9 @@
 go run .
 ```
 Then open: http://127.0.0.1:8080/
+
+---
+
+### Class Diagram
+
+<img src="uml.png">

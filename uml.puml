@@ -1,0 +1,16 @@
+@startuml
+namespace main {
+    class Model << (S,Aquamarine) >> {
+        - counter int64
+
+        - counterHandeler(w http.ResponseWriter, r *http.Request) 
+
+        + Counter() int64
+        + SetCounter(counter int64) 
+        + Add(counter int64) int64
+
+    }
+}
+
+
+@enduml
