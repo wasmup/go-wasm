@@ -44,7 +44,7 @@ func main() {
 
 	// window.Call("Inc") // Call JS function window.Inc from WebAssembly
 
-	buttonGetCounterClick(js.ValueOf(nil), nil)
+	buttonGetCounterClick(js.ValueOf(nil), nil) // run
 
 	select {} // stay
 }
